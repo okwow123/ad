@@ -1,0 +1,15 @@
+<h1>register</h1>
+<form method='post' action='/member/ok_register'>
+id : <input type='text' name='member_id' id='member_id' required=true><br>
+password : <input type='password' name='member_password' id='member_password' required=true><br>
+email : <input type='email' name='member_email' id='member_email' required=true><br>
+address : <input type='text' name='member_address' id='member_address' required=true><br>
+phone : <input type='text' name='member_phone' id='member_phone' required=true><br>
+member_type : 
+<select name="member_type" required=true>
+  <option selected="selected" disabled>choose member type</option>
+  <option value="True">개인</option>
+  <option value="False">기업</option>
+</select> <br>
+<input type='submit' value='register'>
+</form>
