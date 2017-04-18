@@ -1,20 +1,20 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 from django.shortcuts import render
-from .models import Member
+from .models import Store
 from registration.forms import RegistrationForm
 
 
 def list(request):
-    member=Member.objects.all()
-    return render(request,'member/list.html',{'member':member})
+    store=Store.objects.all()
+    return render(request,'store/list.html',{'store':store})
 
 def register(request):
-    return render(request,'member/register.html',{})
+    return render(request,'store/register.html',{})
 
 def register_ok(request):
     if request.method=='POST':
-        member=Member.objects.create(
+        store=Store.objects.create(
             member_id=request.POST.get('member_id'),
             member_email=request.POST.get('member_email'),
             member_password=request.POST.get('member_password'),
@@ -22,6 +22,5 @@ def register_ok(request):
             member_phone=request.POST.get('member_phone'),
             member_type=request.POST.get('member_type')
         )
-    return render(request,'member/register_ok.html',{})
-
+    return render(request,'store/register_ok.html',{})
 
