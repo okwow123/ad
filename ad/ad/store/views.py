@@ -15,12 +15,11 @@ def register(request):
 def register_ok(request):
     if request.method=='POST':
         store=Store.objects.create(
-            member_id=request.POST.get('member_id'),
-            member_email=request.POST.get('member_email'),
-            member_password=request.POST.get('member_password'),
-            member_address=request.POST.get('member_address'),
-            member_phone=request.POST.get('member_phone'),
-            member_type=request.POST.get('member_type')
+            store_email=request.POST.get('store_email'),
+            store_name=request.POST.get('store_name'),
+            store_address=request.POST.get('store_address'),
+            store_image=request.POST.get('store_image'),
+            store_reward=request.POST.get('store_reward'),
         )
     return render(request,'store/register_ok.html',{})
 

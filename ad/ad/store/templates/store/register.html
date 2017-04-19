@@ -1,14 +1,9 @@
 <h1>register</h1>
 <form method='post' action='/store/register_ok'>
 email: <input type='email' name='store_email' id='store_email' required=true><br>
-email : <input type='email' name='member_email' id='member_email' required=true><br>
-address : <input type='text' name='member_address' id='member_address' required=true><br>
-phone : <input type='text' name='member_phone' id='member_phone' required=true><br>
-member_type : 
-<select name="member_type" required=true>
-  <option selected="selected" disabled>choose member type</option>
-  <option value="True">개인</option>
-  <option value="False">기업</option>
-</select> <br>
+name : <input type='text' name='store_name' id='store_name' required=true><br>
+address : <input type='text' name='store_address' id='store_address' required=true><br>
+image : <input type='file' name='store_image' id='store_image' required=true><br>
+store_reward : <input type='number' name='store_reward' id='store_reward' required=true><br> 
 <input type='submit' value='register'>
 </form>
