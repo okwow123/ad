@@ -3,6 +3,8 @@ from __future__ import unicode_literals
 from django.shortcuts import render
 from .models import Store
 from registration.forms import RegistrationForm
+from django.views.decorators.csrf import csrf_exempt
+
 
 
 def list(request):
@@ -12,6 +14,7 @@ def list(request):
 def register(request):
     return render(request,'store/register.html',{})
 
+@csrf_exempt
 def register_ok(request):
     if request.method=='POST':
         store=Store.objects.create(

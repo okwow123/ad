@@ -7,6 +7,6 @@ class Store(models.Model):
     store_email=models.CharField(max_length=50,primary_key=True)
     store_name=models.CharField(max_length=50)
     store_address=models.CharField(max_length=50)
-    store_image=models.ImageField()
+    store_image=models.ImageField(upload_to='/home/ilovejsp/project/ad2/ad/ad/upload')
     store_reward=models.IntegerField(default=0)
 
